@@ -34,4 +34,11 @@ The key to use an Express backend with a project created with `create-react-app`
 
 This tells Webpack development server to proxy our API requests to our API server, given that our Express server is running on **localhost:5000**
 
--Esau
+## Tasks
+
+* Fetch list from API and show in a component
+* Add message to list when button is clicked
+* Add text input. Button click adds the input text to the list
+* Update list of messages whenever a new message is added
+* Write the delete API (on client and server)
+* Clicking on a message deletes it from the list

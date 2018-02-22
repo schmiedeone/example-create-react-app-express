@@ -15,24 +15,24 @@ app.get('/api/hello', (req, res) => {
 
 let list = [
   {
-    id: 1,
+    id: 0,
     text: 'Hello',
   },
   {
-    id: 2,
+    id: 1,
     text: 'This is Schmiede',
   },
   {
-    id: 3,
+    id: 2,
     text: 'We are in Düsseldorf',
   },
   {
-    id: 4,
-    text: 'Thats is Germany!',
+    id: 3,
+    text: 'Thats in Germany!',
   },
 ];
 
-let idCounter = 5;
+let idCounter = 4;
 
 app.get('/api/list', (req, res) => {
   res.send({ list });
@@ -40,7 +40,7 @@ app.get('/api/list', (req, res) => {
 
 app.post('/api/list', (req, res) => {
   const message = req.body.message;
-  list.push({ id: idCounter++, message });
+  list.push({ id: idCounter++, text: message });
   res.send({ list });
 });
 

@@ -22,6 +22,15 @@ class App extends Component {
     return body;
   };
 
+  getListApi = async () => {
+    const response = await fetch('/api/list');
+    const body = await response.json();
+
+    if (response.status !== 200) throw Error(body.message);
+
+    return body;
+  };
+
   addMessageApi = async (message) => {
     let myHeaders = new Headers();
     myHeaders.set('Content-Type', 'application/json');
